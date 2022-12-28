@@ -1,0 +1,32 @@
+{
+  "name": "color_combinations",
+  "version": "1.0.0",
+  "description": "Color Combinations API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w assets/scss -o assets/css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CognitiveSpark/color_combinations.git"
+  },
+  "author": "Sergey Nasolskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CognitiveSpark/color_combinations/issues"
+  },
+  "homepage": "https://github.com/CognitiveSpark/color_combinations#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "color-scheme": "^1.0.1",
+    "express": "^4.18.1",
+    "node-sass": "^7.0.1",
+    "pug": "^3.0.2",
+    "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "url": "^0.11.0"
+  }
+}

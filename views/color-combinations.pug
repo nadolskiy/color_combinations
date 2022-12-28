@@ -1,0 +1,47 @@
+html(lang="en")
+  head
+    title #{title}
+    meta(charset="utf-8")
+    meta(name="title", content=metaTitle)
+    meta(name="description", content=metaDescription)
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    //- meta(name="robots", content="noindex, nofollow")
+    //- meta(name="googlebot", content="noindex, nofollow")
+    //- meta(name="googlebot-news", content="noindex, nofollow")
+    //- meta(name="msapplication-TileImage", content="/img/is-it-available-for-me-2/favicon/favicon-144.png")
+    //- link(rel="shortcut icon", href="/img/is-it-available-for-me-2/favicon/favicon.ico")
+    //- link(rel="icon", sizes="16x16 32x32 64x64",href="/img/is-it-available-for-me-2/favicon/favicon.ico")
+    //- link(rel="icon", type="image/png", sizes="196x196", href="/img/is-it-available-for-me-2/favicon/favicon-192.png")
+    //- link(rel="icon", type="image/png", sizes="160x160", href="/img/is-it-available-for-me-2/favicon/favicon-160.png")
+    //- link(rel="icon", type="image/png", sizes="96x96", href="/img/is-it-available-for-me-2/favicon/favicon-96.png")
+    //- link(rel="icon", type="image/png", sizes="64x64", href="/img/is-it-available-for-me-2/favicon/favicon-64.png")
+    //- link(rel="icon", type="image/png", sizes="32x32", href="/img/is-it-available-for-me-2/favicon/favicon-32.png")
+    //- link(rel="icon", type="image/png", sizes="16x16", href="/img/is-it-available-for-me-2/favicon/favicon-16.png")
+    //- link(rel="apple-touch-icon", href="/img/is-it-available-for-me-2/favicon/favicon-57.png")
+    //- link(rel="apple-touch-icon", sizes="114x114", href="/img/is-it-available-for-me-2/favicon/favicon-114.png")
+    //- link(rel="apple-touch-icon", sizes="72x72", href="/img/is-it-available-for-me-2/favicon/favicon-72.png")
+    //- link(rel="apple-touch-icon", sizes="144x144", href="/img/is-it-available-for-me-2/favicon/favicon-144.png")
+    //- link(rel="apple-touch-icon", sizes="60x60", href="/img/is-it-available-for-me-2/favicon/favicon-60.png")
+    //- link(rel="apple-touch-icon", sizes="120x120", href="/img/is-it-available-for-me-2/favicon/favicon-120.png")
+    //- link(rel="apple-touch-icon", sizes="76x76", href="/img/is-it-available-for-me-2/favicon/favicon-76.png")
+    //- link(rel="apple-touch-icon", sizes="152x152", href="/img/is-it-available-for-me-2/favicon/favicon-152.png")
+    //- link(rel="apple-touch-icon", sizes="180x180", href="/img/is-it-available-for-me-2/favicon/favicon-180.png")
+    //- Google Fonts
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    style
+      include ../node_modules/animate.css/animate.min.css
+      include ../assets/css/color-combinations.css
+  body
+    .body-container
+      include ../includes/color-combinations/nav.pug
+      include ../includes/color-combinations/header.pug
+      include ../includes/color-combinations/content.pug
+      
+    script 
+      include ../node_modules/wow.js/dist/wow.min.js
+      include ../assets/js/color-combinations/color-functions.js
+      include ../node_modules/color-scheme/lib/color-scheme.min.js
+      include ../assets/js/color-combinations/scripts.js
+      //- include ../assets/js/time-is-money/scripts.js

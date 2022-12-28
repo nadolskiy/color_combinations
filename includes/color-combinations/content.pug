@@ -1,0 +1,93 @@
+-var variations_descriptions = ['','Pastel (softer colors with added whiteness)','Soft (produces darker pastel colors)', 'Light (very light, almost washed-out colors)', 'Hard (deeper, very saturated colors)','Pale (colors with more gray; less saturated)'];
+-var variations = ['default', 'pastel', 'soft','light','hard','pale'];
+
+-var mono_colors = 4;
+-var contrast_colors = 8;
+-var triade_colors = 12;
+-var tetrade_colors = 16;
+-var analogic_colors = 12;
+-var n = 0;
+-var m = 0;
+
+section.content 
+  .container 
+    .content-container
+      //- Complementary
+      h3(class="wow animate__animated animate__slideInUp" id="complementary")  Complementary
+      p(class="wow animate__animated animate__slideInLeft") Two colors that are on opposite sides of the color wheel. This combination provides a high contrast and high impact color combination – together, these colors will appear brighter and more prominent.
+      .box.box--complementary
+        .box-container.box-container--complementary.wow.animate__animated.animate__slideInLeft
+          .box-color#box-complementary-color-1
+          p#box-complementary-code-1 
+        .box-container.box-container--complementary.wow.animate__animated.animate__slideInRight
+          .box-color#box-complementary-color-2
+          p#box-complementary-code-2 
+      //- Mono
+      h3(class="wow animate__animated animate__slideInUp" id="mono")  Monochromatic
+      p(class="wow animate__animated animate__slideInUp") TThree shades, tones and tints of one base color. Provides a subtle and conservative color combination. This is a versatile color combination that is easy to apply to design projects for a harmonious look.
+      each variation in variations
+        if variations_descriptions[(m)] != ''
+            h4(class="wow animate__animated animate__slideInUp")= variations_descriptions[m]
+        - m+= 1;
+        .box.box--mono 
+          - n = 0;
+          while n < mono_colors 
+            .box-container.box-container--mono.wow.animate__animated.animate__zoomIn
+              .box-color(id="box-mono-"+variation+"-color-"+n)
+              p(id="box-mono-"+variation+"-code-"+(n++))
+      //- Contrast
+      h3(class="wow animate__animated animate__slideInUp" id="contrast")  Contrast
+      p(class="wow animate__animated animate__slideInUp") Contrast supplements the selected hue with its complement (the color opposite it on the color wheel) as another source color.
+      - m = 0;
+      each variation in variations
+        if variations_descriptions[(m)] != ''
+            h4(class="wow animate__animated animate__slideInUp")= variations_descriptions[m]
+        - m+= 1;
+        .box.box--contrast 
+          - n = 0;
+          while n < contrast_colors 
+            .box-container.box-container--contrast.wow.animate__animated.animate__zoomIn
+              .box-color(id="box-contrast-"+variation+"-color-"+n)
+              p(id="box-contrast-"+variation+"-code-"+(n++))
+      //- Triadic
+      h3(class="wow animate__animated animate__slideInUp" id="triadic")  Triadic
+      p(class="wow animate__animated animate__slideInUp") Three colors that are evenly spaced on the color wheel. This provides a high contrast color scheme, but less so than the complementary color combination — making it more versatile. This combination creates bold, vibrant color palettes.
+      - m = 0;
+      each variation in variations
+        if variations_descriptions[(m)] != ''
+            h4(class="wow animate__animated animate__slideInUp")= variations_descriptions[m]
+        - m+= 1;
+        .box.box--triade
+          - n = 0;
+          while n < triade_colors 
+            .box-container.box-container--triade.wow.animate__animated.animate__zoomIn
+              .box-color(id="box-triade-"+variation+"-color-"+n)
+              p(id="box-triade-"+variation+"-code-"+(n++))
+      //- Tetrade
+      h3(class="wow animate__animated animate__slideInUp" id="tetrade")  Tetradic
+      p(class="wow animate__animated animate__slideInUp") Four colors that are evenly spaced on the color wheel. Tetradic color schemes are bold and work best if you let one color be dominant, and use the others as accents. The more colors you have in your palette, the more difficult it is to balance.
+      - m = 0;
+      each variation in variations
+        if variations_descriptions[(m)] != ''
+            h4(class="wow animate__animated animate__slideInUp")= variations_descriptions[m]
+        - m+= 1;
+        .box.box--tetrade
+          - n = 0;
+          while n < tetrade_colors 
+            .box-container.box-container--tetrade.wow.animate__animated.animate__zoomIn
+              .box-color(id="box-tetrade-"+variation+"-color-"+n)
+              p(id="box-tetrade-"+variation+"-code-"+(n++))
+      //- Analogic
+      h3(class="wow animate__animated animate__slideInUp" id="analogous")  Analogous
+      p(class="wow animate__animated animate__slideInUp") Three colors that are side by side on the color wheel. This color combination is versatile, but can be overwhelming. To balance an analogous color scheme, choose one dominant color, and use the others as accents.
+      - m = 0;
+      each variation in variations
+        if variations_descriptions[(m)] != ''
+            h4(class="wow animate__animated animate__slideInUp")= variations_descriptions[m]
+        - m+= 1;
+        .box.box--analogic
+          - n = 0;
+          while n < analogic_colors 
+            .box-container.box-container--analogic.wow.animate__animated.animate__zoomIn
+              .box-color(id="box-analogic-"+variation+"-color-"+n)
+              p(id="box-analogic-"+variation+"-code-"+(n++))

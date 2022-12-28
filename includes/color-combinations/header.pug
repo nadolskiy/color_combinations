@@ -1,0 +1,26 @@
+-var color_picker = [['R', 'r_value_input', 'r_value_range', 0],['G', 'g_value_input', 'g_value_range', 0],['B', 'b_value_input','b_value_range', 0]];
+
+
+header#header
+  .container 
+    .left-side
+      h1(class="wow animate__animated animate__slideInLeft") Color Combinations
+      p(class="wow animate__animated animate__slideInLeft") Want to know what colors look good together?<br> <span>CGSpark</span> will helps you with this.
+    .right-side 
+      .box(class="wow animate__animated animate__slideInRight")
+        .box-color
+          .box-color-pickers
+            each picker in color_picker
+              .box-color-pickers--container 
+                p= picker[0]
+                input(id=picker[1] type="number", name=picker[1] min="0", max="255" step="1" value=picker[3])
+                input(id=picker[2] type="range", name=picker[2] min="0", max="255" step="1" value=picker[3])
+        .box-hex 
+            input#box-hex-input(type="text" value="#" class="box-hex-input")
+    .links-container 
+      a(href="#complementary") Complementary
+      a(href="#mono") Monochromatic
+      a(href="#contrast") Contrast
+      a(href="#triadic") Triadic
+      a(href="#tetrade") Tetrade
+      a(href="#analogous") Analogous
